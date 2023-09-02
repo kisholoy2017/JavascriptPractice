@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My DOM Example</title>
+</head><body>
+    <h1 id="myHeading">This is a Heading</h1><div id="myDiv">
+        <p id="myParagraph">This is a div with a paragraph inside.</p>
+   
+
+		<a id="myLink" href="https://example.com">Visit Example.com</a>
+
+		<form id="myForm" action="/submit" method="post"><label for="name">Name:</label><input type="text" id="name" name="name"><br><br><label for="email">Email:</label>
+			<input type="email" id="email" name="email"><br><br>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	
+	<script>
+	
+	var cVal1, cVal2, cVal3, cVal4, cVal5, cVal6, cVal7, cVal8, cVal9, cVal10, cVal11, cVal12, cVal13, cVal14, cVal15, cVal16, cVal17, cVal18;
+	cVal1 = document; // this is returning the document
+	cVal2 = document.children; // this is returning the array - entire HTML
+	cVal3 = document.children[0]; // since there is only one element, this will refer only to the HTML object with 2 other nodes, head and body
+	cVal3 = document.children[0].firstChild; // to get to the first node 
+	cVal4 = document.children[0].firstChild.nextSibling; // to get to the next node using a property of firstChild 
+	cVal5 = document.children[0].lastChild; // to get last child of a parent node 
+	cVal6 = document.children[0].lastChild.previousSibling; // to get previous sibling to last child
+	cVal7 = document.getElementById("myDiv");
+	cVal8 = cVal7.previousSibling;
+	cVal9 = cVal7.nextElementSibling;
+	cVal10 = cVal7.children; // this gives the children of div id = myDiv i.e. paragraph, link and form 
+	cVal11 = cVal7.children[0]; // this gives first child of div, i.e. paragraph
+	cVal12 = cVal7.children[1]; // this gives second child of div, i.e. link
+	cVal13 = cVal7.children[2]; // this gives third child of div, i.e. form
+	cVal14 = cVal7.children[2].children;  // this gives children of the third child of div i.e. all parts of the form like label and input
+	cVal15 = cVal7.children[2].firstChild;   // this gives the first child of form (i.e. first child of third child of div, which is form)
+	cVal16 = cVal7.children[2].firstChild.nextSibling; // this gives the next child in form
+	cVal17 = cVal7.children[2].firstChild.nextSibling.nextSibling; // this gives the next to next child in form, so we can use nextSibling in series
+	cVal18 = cVal7.children[2].children[0]; // this should be exactly equal to cVal115 and IT IS! So we can access array elements this way also 
+	console.log(cVal1); 
+	console.log(cVal2); 
+	console.log(cVal3); 
+	console.log(cVal4); 
+	console.log(cVal5); 
+	console.log(cVal6); 
+	console.log(cVal7); 
+	console.log(cVal8); 
+	console.log(cVal9); 
+	console.log(cVal10); 
+	console.log(cVal11); 
+	console.log(cVal12);
+	console.log(cVal13);
+	console.log(cVal14);
+	console.log(cVal15);
+	console.log(cVal16);
+	console.log(cVal17);
+	console.log(cVal18);
+	
+	</script>
+	
+</body>
+</html>
